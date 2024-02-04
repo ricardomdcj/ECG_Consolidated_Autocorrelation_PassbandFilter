@@ -4,7 +4,7 @@
 
 // -------------------------------
 // declaring variables and vectors
-double data[5000]   =   {
+double        data[5000]   =   {
         0.06 ,  0.06 ,  0.06 ,  0.06 ,  0.06 ,  0.06 ,  0.068,  0.074,
         0.075,  0.075,  0.08 ,  0.085,  0.082,  0.081,  0.086,  0.09 ,
         0.09 ,  0.089,  0.092,  0.095,  0.095,  0.099,  0.103,  0.109,
@@ -633,10 +633,10 @@ double data[5000]   =   {
 
 
 
-static double features[] = {};
-double  ndata[5000]   = {0.0};
-int     lag = 5000;
-int     sizeOfData = 5000;
+double        features[] = {};
+double        ndata[5000]   = {0.0};
+int           lag = 5000;
+int           sizeOfData = 5000;
 
 float   mean, var;
 
@@ -682,14 +682,14 @@ void setup()
 
 void loop()
 {
-    ei_printf("ECG Autocorrelation 500Hz");
+    ei_printf("ECG Autocorrelation 500Hz - ");
 
-    if (sizeof(features) / sizeof(float) != EI_CLASSIFIER_DSP_INPUT_FRAME_SIZE) {
+/*     if (sizeof(features) / sizeof(double) != EI_CLASSIFIER_DSP_INPUT_FRAME_SIZE) {
         ei_printf("The size of your 'features' array is not correct. Expected %lu items, but had %lu\n",
-            EI_CLASSIFIER_DSP_INPUT_FRAME_SIZE, sizeof(features) / sizeof(float));
+            EI_CLASSIFIER_DSP_INPUT_FRAME_SIZE, sizeof(features) / sizeof(double));
         delay(1000);
         return;
-    }
+    } */
 
     ei_impulse_result_t result = { 0 };
 
