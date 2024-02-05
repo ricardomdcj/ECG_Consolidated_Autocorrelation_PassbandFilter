@@ -792,35 +792,35 @@ void norm(void)
 void atc(void)
 {
   // lag sized loop
-    for (int l = 0; l < lag; l++)
-    {
-        double c = 1.0, sum = 0.0;
-        double tmp = 0.0;
+  for (int l = 0; l < lag; l++)
+  {
+      double c = 1.0, sum = 0.0;
+      double tmp = 0.0;
 
-        if (l > 0)
-        {
-            for (int i = l; i < (sizeOfData - 1); i++)
-            {
-                // calculate the product point by point
-                tmp += (ndata[i] * ndata[i - l]);
-            }
-            c = tmp / sizeOfData / var;
-        }
+      if (l > 0)
+      {
+          for (int i = l; i < (sizeOfData - 1); i++)
+          {
+              // calculate the product point by point
+              tmp += (ndata[i] * ndata[i - l]);
+          }
+          c = tmp / sizeOfData / var;
+      }
 
-        features[l] = c;
+      features[l] = c;
 
-        Serial.print("features[");
-        Serial.print(l);
-        Serial.print("] = ");
-        Serial.println(features[l], 8);
-    }
+      Serial.print("features[");
+      Serial.print(l);
+      Serial.print("] = ");
+      Serial.println(features[l], 8);
+  }
 
-    millisEnd = millis();
-    Serial.print("Program ends at:");
-    Serial.print(millisEnd);
-    Serial.println("ms");
+  millisEnd = millis();
+  Serial.print("Program ends at:");
+  Serial.print(millisEnd);
+  Serial.println("ms");
 
-    Serial.print("Autocorrelation execution time:");
-    Serial.print(millisEnd - millisStart);
-    Serial.println("ms");
+  Serial.print("Autocorrelation execution time:");
+  Serial.print(millisEnd - millisStart);
+  Serial.println("ms");
 }
