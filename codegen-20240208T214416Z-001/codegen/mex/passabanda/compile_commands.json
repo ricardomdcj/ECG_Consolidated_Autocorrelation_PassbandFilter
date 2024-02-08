@@ -1,0 +1,122 @@
+[
+  {
+    "directory": "C:\\Users\\silva\\OneDrive\\Desktop\\ECG_Denoising\\codegen\\mex\\passabanda",
+    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2023b\\3P.instrset\\mingw_w64.instrset\\bin\\gcc -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c99 -I \"C:\\Users\\silva\\OneDrive\\Desktop\\ECG_Denoising\\codegen\\mex\\passabanda\" -I \"C:\\Users\\silva\\OneDrive\\Desktop\\ECG_Denoising\" -I \"C:\\Users\\silva\\OneDrive\\Desktop\\ECG_Denoising\\codegen\\mex\\passabanda\\CXSparse\\Include\" -I \"C:\\Users\\silva\\OneDrive\\Desktop\\ECG_Denoising\\codegen\\mex\\passabanda\\CXSparse\\SuiteSparse_config\" -I \"C:\\Users\\silva\\OneDrive\\Desktop\\ECG_Denoising\\codegen\\mex\\passabanda\\CXSparse\\CXSparseSupport\" -I \"C:\\Users\\silva\\OneDrive\\Desktop\\ECG_Denoising\\codegen\\mex\\passabanda\\interface\" -I \"C:\\Program Files\\MATLAB\\R2023b\\extern\\include\" -I \".\" -DMODEL=passabanda_mex -D__USE_MINGW_ANSI_STDIO=1 -msse2  CXSparse/Source/cs_ri_bundle.c -o build/win64/cs_ri_bundle.o",
+    "file": "CXSparse/Source/cs_ri_bundle.c",
+    "output": "build/win64/cs_ri_bundle.o"
+  },
+  {
+    "directory": "C:\\Users\\silva\\OneDrive\\Desktop\\ECG_Denoising\\codegen\\mex\\passabanda",
+    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2023b\\3P.instrset\\mingw_w64.instrset\\bin\\gcc -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c99 -I \"C:\\Users\\silva\\OneDrive\\Desktop\\ECG_Denoising\\codegen\\mex\\passabanda\" -I \"C:\\Users\\silva\\OneDrive\\Desktop\\ECG_Denoising\" -I \"C:\\Users\\silva\\OneDrive\\Desktop\\ECG_Denoising\\codegen\\mex\\passabanda\\CXSparse\\Include\" -I \"C:\\Users\\silva\\OneDrive\\Desktop\\ECG_Denoising\\codegen\\mex\\passabanda\\CXSparse\\SuiteSparse_config\" -I \"C:\\Users\\silva\\OneDrive\\Desktop\\ECG_Denoising\\codegen\\mex\\passabanda\\CXSparse\\CXSparseSupport\" -I \"C:\\Users\\silva\\OneDrive\\Desktop\\ECG_Denoising\\codegen\\mex\\passabanda\\interface\" -I \"C:\\Program Files\\MATLAB\\R2023b\\extern\\include\" -I \".\" -DMODEL=passabanda_mex -D__USE_MINGW_ANSI_STDIO=1 -msse2  CXSparse/Source/cs_ci_bundle.c -o build/win64/cs_ci_bundle.o",
+    "file": "CXSparse/Source/cs_ci_bundle.c",
+    "output": "build/win64/cs_ci_bundle.o"
+  },
+  {
+    "directory": "C:\\Users\\silva\\OneDrive\\Desktop\\ECG_Denoising\\codegen\\mex\\passabanda",
+    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2023b\\3P.instrset\\mingw_w64.instrset\\bin\\gcc -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c99 -I \"C:\\Users\\silva\\OneDrive\\Desktop\\ECG_Denoising\\codegen\\mex\\passabanda\" -I \"C:\\Users\\silva\\OneDrive\\Desktop\\ECG_Denoising\" -I \"C:\\Users\\silva\\OneDrive\\Desktop\\ECG_Denoising\\codegen\\mex\\passabanda\\CXSparse\\Include\" -I \"C:\\Users\\silva\\OneDrive\\Desktop\\ECG_Denoising\\codegen\\mex\\passabanda\\CXSparse\\SuiteSparse_config\" -I \"C:\\Users\\silva\\OneDrive\\Desktop\\ECG_Denoising\\codegen\\mex\\passabanda\\CXSparse\\CXSparseSupport\" -I \"C:\\Users\\silva\\OneDrive\\Desktop\\ECG_Denoising\\codegen\\mex\\passabanda\\interface\" -I \"C:\\Program Files\\MATLAB\\R2023b\\extern\\include\" -I \".\" -DMODEL=passabanda_mex -D__USE_MINGW_ANSI_STDIO=1 -msse2  CXSparse/CXSparseSupport/solve_from_lu.c -o build/win64/solve_from_lu.o",
+    "file": "CXSparse/CXSparseSupport/solve_from_lu.c",
+    "output": "build/win64/solve_from_lu.o"
+  },
+  {
+    "directory": "C:\\Users\\silva\\OneDrive\\Desktop\\ECG_Denoising\\codegen\\mex\\passabanda",
+    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2023b\\3P.instrset\\mingw_w64.instrset\\bin\\gcc -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c99 -I \"C:\\Users\\silva\\OneDrive\\Desktop\\ECG_Denoising\\codegen\\mex\\passabanda\" -I \"C:\\Users\\silva\\OneDrive\\Desktop\\ECG_Denoising\" -I \"C:\\Users\\silva\\OneDrive\\Desktop\\ECG_Denoising\\codegen\\mex\\passabanda\\CXSparse\\Include\" -I \"C:\\Users\\silva\\OneDrive\\Desktop\\ECG_Denoising\\codegen\\mex\\passabanda\\CXSparse\\SuiteSparse_config\" -I \"C:\\Users\\silva\\OneDrive\\Desktop\\ECG_Denoising\\codegen\\mex\\passabanda\\CXSparse\\CXSparseSupport\" -I \"C:\\Users\\silva\\OneDrive\\Desktop\\ECG_Denoising\\codegen\\mex\\passabanda\\interface\" -I \"C:\\Program Files\\MATLAB\\R2023b\\extern\\include\" -I \".\" -DMODEL=passabanda_mex -D__USE_MINGW_ANSI_STDIO=1 -msse2  CXSparse/CXSparseSupport/solve_from_qr.c -o build/win64/solve_from_qr.o",
+    "file": "CXSparse/CXSparseSupport/solve_from_qr.c",
+    "output": "build/win64/solve_from_qr.o"
+  },
+  {
+    "directory": "C:\\Users\\silva\\OneDrive\\Desktop\\ECG_Denoising\\codegen\\mex\\passabanda",
+    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2023b\\3P.instrset\\mingw_w64.instrset\\bin\\gcc -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c99 -I \"C:\\Users\\silva\\OneDrive\\Desktop\\ECG_Denoising\\codegen\\mex\\passabanda\" -I \"C:\\Users\\silva\\OneDrive\\Desktop\\ECG_Denoising\" -I \"C:\\Users\\silva\\OneDrive\\Desktop\\ECG_Denoising\\codegen\\mex\\passabanda\\CXSparse\\Include\" -I \"C:\\Users\\silva\\OneDrive\\Desktop\\ECG_Denoising\\codegen\\mex\\passabanda\\CXSparse\\SuiteSparse_config\" -I \"C:\\Users\\silva\\OneDrive\\Desktop\\ECG_Denoising\\codegen\\mex\\passabanda\\CXSparse\\CXSparseSupport\" -I \"C:\\Users\\silva\\OneDrive\\Desktop\\ECG_Denoising\\codegen\\mex\\passabanda\\interface\" -I \"C:\\Program Files\\MATLAB\\R2023b\\extern\\include\" -I \".\" -DMODEL=passabanda_mex -D__USE_MINGW_ANSI_STDIO=1 -msse2  CXSparse/CXSparseSupport/makeCXSparseMatrix.c -o build/win64/makeCXSparseMatrix.o",
+    "file": "CXSparse/CXSparseSupport/makeCXSparseMatrix.c",
+    "output": "build/win64/makeCXSparseMatrix.o"
+  },
+  {
+    "directory": "C:\\Users\\silva\\OneDrive\\Desktop\\ECG_Denoising\\codegen\\mex\\passabanda",
+    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2023b\\3P.instrset\\mingw_w64.instrset\\bin\\gcc -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c99 -I \"C:\\Users\\silva\\OneDrive\\Desktop\\ECG_Denoising\\codegen\\mex\\passabanda\" -I \"C:\\Users\\silva\\OneDrive\\Desktop\\ECG_Denoising\" -I \"C:\\Users\\silva\\OneDrive\\Desktop\\ECG_Denoising\\codegen\\mex\\passabanda\\CXSparse\\Include\" -I \"C:\\Users\\silva\\OneDrive\\Desktop\\ECG_Denoising\\codegen\\mex\\passabanda\\CXSparse\\SuiteSparse_config\" -I \"C:\\Users\\silva\\OneDrive\\Desktop\\ECG_Denoising\\codegen\\mex\\passabanda\\CXSparse\\CXSparseSupport\" -I \"C:\\Users\\silva\\OneDrive\\Desktop\\ECG_Denoising\\codegen\\mex\\passabanda\\interface\" -I \"C:\\Program Files\\MATLAB\\R2023b\\extern\\include\" -I \".\" -DMODEL=passabanda_mex -D__USE_MINGW_ANSI_STDIO=1 -msse2  CXSparse/CXSparseSupport/unpackCXStruct.c -o build/win64/unpackCXStruct.o",
+    "file": "CXSparse/CXSparseSupport/unpackCXStruct.c",
+    "output": "build/win64/unpackCXStruct.o"
+  },
+  {
+    "directory": "C:\\Users\\silva\\OneDrive\\Desktop\\ECG_Denoising\\codegen\\mex\\passabanda",
+    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2023b\\3P.instrset\\mingw_w64.instrset\\bin\\gcc -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c99 -I \"C:\\Users\\silva\\OneDrive\\Desktop\\ECG_Denoising\\codegen\\mex\\passabanda\" -I \"C:\\Users\\silva\\OneDrive\\Desktop\\ECG_Denoising\" -I \"C:\\Users\\silva\\OneDrive\\Desktop\\ECG_Denoising\\codegen\\mex\\passabanda\\CXSparse\\Include\" -I \"C:\\Users\\silva\\OneDrive\\Desktop\\ECG_Denoising\\codegen\\mex\\passabanda\\CXSparse\\SuiteSparse_config\" -I \"C:\\Users\\silva\\OneDrive\\Desktop\\ECG_Denoising\\codegen\\mex\\passabanda\\CXSparse\\CXSparseSupport\" -I \"C:\\Users\\silva\\OneDrive\\Desktop\\ECG_Denoising\\codegen\\mex\\passabanda\\interface\" -I \"C:\\Program Files\\MATLAB\\R2023b\\extern\\include\" -I \".\" -DMODEL=passabanda_mex -D__USE_MINGW_ANSI_STDIO=1 -msse2  passabanda_data.c -o build/win64/passabanda_data.o",
+    "file": "passabanda_data.c",
+    "output": "build/win64/passabanda_data.o"
+  },
+  {
+    "directory": "C:\\Users\\silva\\OneDrive\\Desktop\\ECG_Denoising\\codegen\\mex\\passabanda",
+    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2023b\\3P.instrset\\mingw_w64.instrset\\bin\\gcc -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c99 -I \"C:\\Users\\silva\\OneDrive\\Desktop\\ECG_Denoising\\codegen\\mex\\passabanda\" -I \"C:\\Users\\silva\\OneDrive\\Desktop\\ECG_Denoising\" -I \"C:\\Users\\silva\\OneDrive\\Desktop\\ECG_Denoising\\codegen\\mex\\passabanda\\CXSparse\\Include\" -I \"C:\\Users\\silva\\OneDrive\\Desktop\\ECG_Denoising\\codegen\\mex\\passabanda\\CXSparse\\SuiteSparse_config\" -I \"C:\\Users\\silva\\OneDrive\\Desktop\\ECG_Denoising\\codegen\\mex\\passabanda\\CXSparse\\CXSparseSupport\" -I \"C:\\Users\\silva\\OneDrive\\Desktop\\ECG_Denoising\\codegen\\mex\\passabanda\\interface\" -I \"C:\\Program Files\\MATLAB\\R2023b\\extern\\include\" -I \".\" -DMODEL=passabanda_mex -D__USE_MINGW_ANSI_STDIO=1 -msse2  rt_nonfinite.c -o build/win64/rt_nonfinite.o",
+    "file": "rt_nonfinite.c",
+    "output": "build/win64/rt_nonfinite.o"
+  },
+  {
+    "directory": "C:\\Users\\silva\\OneDrive\\Desktop\\ECG_Denoising\\codegen\\mex\\passabanda",
+    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2023b\\3P.instrset\\mingw_w64.instrset\\bin\\gcc -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c99 -I \"C:\\Users\\silva\\OneDrive\\Desktop\\ECG_Denoising\\codegen\\mex\\passabanda\" -I \"C:\\Users\\silva\\OneDrive\\Desktop\\ECG_Denoising\" -I \"C:\\Users\\silva\\OneDrive\\Desktop\\ECG_Denoising\\codegen\\mex\\passabanda\\CXSparse\\Include\" -I \"C:\\Users\\silva\\OneDrive\\Desktop\\ECG_Denoising\\codegen\\mex\\passabanda\\CXSparse\\SuiteSparse_config\" -I \"C:\\Users\\silva\\OneDrive\\Desktop\\ECG_Denoising\\codegen\\mex\\passabanda\\CXSparse\\CXSparseSupport\" -I \"C:\\Users\\silva\\OneDrive\\Desktop\\ECG_Denoising\\codegen\\mex\\passabanda\\interface\" -I \"C:\\Program Files\\MATLAB\\R2023b\\extern\\include\" -I \".\" -DMODEL=passabanda_mex -D__USE_MINGW_ANSI_STDIO=1 -msse2  passabanda_initialize.c -o build/win64/passabanda_initialize.o",
+    "file": "passabanda_initialize.c",
+    "output": "build/win64/passabanda_initialize.o"
+  },
+  {
+    "directory": "C:\\Users\\silva\\OneDrive\\Desktop\\ECG_Denoising\\codegen\\mex\\passabanda",
+    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2023b\\3P.instrset\\mingw_w64.instrset\\bin\\gcc -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c99 -I \"C:\\Users\\silva\\OneDrive\\Desktop\\ECG_Denoising\\codegen\\mex\\passabanda\" -I \"C:\\Users\\silva\\OneDrive\\Desktop\\ECG_Denoising\" -I \"C:\\Users\\silva\\OneDrive\\Desktop\\ECG_Denoising\\codegen\\mex\\passabanda\\CXSparse\\Include\" -I \"C:\\Users\\silva\\OneDrive\\Desktop\\ECG_Denoising\\codegen\\mex\\passabanda\\CXSparse\\SuiteSparse_config\" -I \"C:\\Users\\silva\\OneDrive\\Desktop\\ECG_Denoising\\codegen\\mex\\passabanda\\CXSparse\\CXSparseSupport\" -I \"C:\\Users\\silva\\OneDrive\\Desktop\\ECG_Denoising\\codegen\\mex\\passabanda\\interface\" -I \"C:\\Program Files\\MATLAB\\R2023b\\extern\\include\" -I \".\" -DMODEL=passabanda_mex -D__USE_MINGW_ANSI_STDIO=1 -msse2  passabanda_terminate.c -o build/win64/passabanda_terminate.o",
+    "file": "passabanda_terminate.c",
+    "output": "build/win64/passabanda_terminate.o"
+  },
+  {
+    "directory": "C:\\Users\\silva\\OneDrive\\Desktop\\ECG_Denoising\\codegen\\mex\\passabanda",
+    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2023b\\3P.instrset\\mingw_w64.instrset\\bin\\gcc -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c99 -I \"C:\\Users\\silva\\OneDrive\\Desktop\\ECG_Denoising\\codegen\\mex\\passabanda\" -I \"C:\\Users\\silva\\OneDrive\\Desktop\\ECG_Denoising\" -I \"C:\\Users\\silva\\OneDrive\\Desktop\\ECG_Denoising\\codegen\\mex\\passabanda\\CXSparse\\Include\" -I \"C:\\Users\\silva\\OneDrive\\Desktop\\ECG_Denoising\\codegen\\mex\\passabanda\\CXSparse\\SuiteSparse_config\" -I \"C:\\Users\\silva\\OneDrive\\Desktop\\ECG_Denoising\\codegen\\mex\\passabanda\\CXSparse\\CXSparseSupport\" -I \"C:\\Users\\silva\\OneDrive\\Desktop\\ECG_Denoising\\codegen\\mex\\passabanda\\interface\" -I \"C:\\Program Files\\MATLAB\\R2023b\\extern\\include\" -I \".\" -DMODEL=passabanda_mex -D__USE_MINGW_ANSI_STDIO=1 -msse2  passabanda.c -o build/win64/passabanda.o",
+    "file": "passabanda.c",
+    "output": "build/win64/passabanda.o"
+  },
+  {
+    "directory": "C:\\Users\\silva\\OneDrive\\Desktop\\ECG_Denoising\\codegen\\mex\\passabanda",
+    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2023b\\3P.instrset\\mingw_w64.instrset\\bin\\gcc -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c99 -I \"C:\\Users\\silva\\OneDrive\\Desktop\\ECG_Denoising\\codegen\\mex\\passabanda\" -I \"C:\\Users\\silva\\OneDrive\\Desktop\\ECG_Denoising\" -I \"C:\\Users\\silva\\OneDrive\\Desktop\\ECG_Denoising\\codegen\\mex\\passabanda\\CXSparse\\Include\" -I \"C:\\Users\\silva\\OneDrive\\Desktop\\ECG_Denoising\\codegen\\mex\\passabanda\\CXSparse\\SuiteSparse_config\" -I \"C:\\Users\\silva\\OneDrive\\Desktop\\ECG_Denoising\\codegen\\mex\\passabanda\\CXSparse\\CXSparseSupport\" -I \"C:\\Users\\silva\\OneDrive\\Desktop\\ECG_Denoising\\codegen\\mex\\passabanda\\interface\" -I \"C:\\Program Files\\MATLAB\\R2023b\\extern\\include\" -I \".\" -DMODEL=passabanda_mex -D__USE_MINGW_ANSI_STDIO=1 -msse2  warning.c -o build/win64/warning.o",
+    "file": "warning.c",
+    "output": "build/win64/warning.o"
+  },
+  {
+    "directory": "C:\\Users\\silva\\OneDrive\\Desktop\\ECG_Denoising\\codegen\\mex\\passabanda",
+    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2023b\\3P.instrset\\mingw_w64.instrset\\bin\\gcc -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c99 -I \"C:\\Users\\silva\\OneDrive\\Desktop\\ECG_Denoising\\codegen\\mex\\passabanda\" -I \"C:\\Users\\silva\\OneDrive\\Desktop\\ECG_Denoising\" -I \"C:\\Users\\silva\\OneDrive\\Desktop\\ECG_Denoising\\codegen\\mex\\passabanda\\CXSparse\\Include\" -I \"C:\\Users\\silva\\OneDrive\\Desktop\\ECG_Denoising\\codegen\\mex\\passabanda\\CXSparse\\SuiteSparse_config\" -I \"C:\\Users\\silva\\OneDrive\\Desktop\\ECG_Denoising\\codegen\\mex\\passabanda\\CXSparse\\CXSparseSupport\" -I \"C:\\Users\\silva\\OneDrive\\Desktop\\ECG_Denoising\\codegen\\mex\\passabanda\\interface\" -I \"C:\\Program Files\\MATLAB\\R2023b\\extern\\include\" -I \".\" -DMODEL=passabanda_mex -D__USE_MINGW_ANSI_STDIO=1 -msse2  interface/_coder_passabanda_api.c -o build/win64/_coder_passabanda_api.o",
+    "file": "interface/_coder_passabanda_api.c",
+    "output": "build/win64/_coder_passabanda_api.o"
+  },
+  {
+    "directory": "C:\\Users\\silva\\OneDrive\\Desktop\\ECG_Denoising\\codegen\\mex\\passabanda",
+    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2023b\\3P.instrset\\mingw_w64.instrset\\bin\\gcc -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c99 -I \"C:\\Users\\silva\\OneDrive\\Desktop\\ECG_Denoising\\codegen\\mex\\passabanda\" -I \"C:\\Users\\silva\\OneDrive\\Desktop\\ECG_Denoising\" -I \"C:\\Users\\silva\\OneDrive\\Desktop\\ECG_Denoising\\codegen\\mex\\passabanda\\CXSparse\\Include\" -I \"C:\\Users\\silva\\OneDrive\\Desktop\\ECG_Denoising\\codegen\\mex\\passabanda\\CXSparse\\SuiteSparse_config\" -I \"C:\\Users\\silva\\OneDrive\\Desktop\\ECG_Denoising\\codegen\\mex\\passabanda\\CXSparse\\CXSparseSupport\" -I \"C:\\Users\\silva\\OneDrive\\Desktop\\ECG_Denoising\\codegen\\mex\\passabanda\\interface\" -I \"C:\\Program Files\\MATLAB\\R2023b\\extern\\include\" -I \".\" -DMODEL=passabanda_mex -D__USE_MINGW_ANSI_STDIO=1 -msse2  interface/_coder_passabanda_mex.c -o build/win64/_coder_passabanda_mex.o",
+    "file": "interface/_coder_passabanda_mex.c",
+    "output": "build/win64/_coder_passabanda_mex.o"
+  },
+  {
+    "directory": "C:\\Users\\silva\\OneDrive\\Desktop\\ECG_Denoising\\codegen\\mex\\passabanda",
+    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2023b\\3P.instrset\\mingw_w64.instrset\\bin\\gcc -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c99 -I \"C:\\Users\\silva\\OneDrive\\Desktop\\ECG_Denoising\\codegen\\mex\\passabanda\" -I \"C:\\Users\\silva\\OneDrive\\Desktop\\ECG_Denoising\" -I \"C:\\Users\\silva\\OneDrive\\Desktop\\ECG_Denoising\\codegen\\mex\\passabanda\\CXSparse\\Include\" -I \"C:\\Users\\silva\\OneDrive\\Desktop\\ECG_Denoising\\codegen\\mex\\passabanda\\CXSparse\\SuiteSparse_config\" -I \"C:\\Users\\silva\\OneDrive\\Desktop\\ECG_Denoising\\codegen\\mex\\passabanda\\CXSparse\\CXSparseSupport\" -I \"C:\\Users\\silva\\OneDrive\\Desktop\\ECG_Denoising\\codegen\\mex\\passabanda\\interface\" -I \"C:\\Program Files\\MATLAB\\R2023b\\extern\\include\" -I \".\" -DMODEL=passabanda_mex -D__USE_MINGW_ANSI_STDIO=1 -msse2  introsort.c -o build/win64/introsort.o",
+    "file": "introsort.c",
+    "output": "build/win64/introsort.o"
+  },
+  {
+    "directory": "C:\\Users\\silva\\OneDrive\\Desktop\\ECG_Denoising\\codegen\\mex\\passabanda",
+    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2023b\\3P.instrset\\mingw_w64.instrset\\bin\\gcc -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c99 -I \"C:\\Users\\silva\\OneDrive\\Desktop\\ECG_Denoising\\codegen\\mex\\passabanda\" -I \"C:\\Users\\silva\\OneDrive\\Desktop\\ECG_Denoising\" -I \"C:\\Users\\silva\\OneDrive\\Desktop\\ECG_Denoising\\codegen\\mex\\passabanda\\CXSparse\\Include\" -I \"C:\\Users\\silva\\OneDrive\\Desktop\\ECG_Denoising\\codegen\\mex\\passabanda\\CXSparse\\SuiteSparse_config\" -I \"C:\\Users\\silva\\OneDrive\\Desktop\\ECG_Denoising\\codegen\\mex\\passabanda\\CXSparse\\CXSparseSupport\" -I \"C:\\Users\\silva\\OneDrive\\Desktop\\ECG_Denoising\\codegen\\mex\\passabanda\\interface\" -I \"C:\\Program Files\\MATLAB\\R2023b\\extern\\include\" -I \".\" -DMODEL=passabanda_mex -D__USE_MINGW_ANSI_STDIO=1 -msse2  insertionsort.c -o build/win64/insertionsort.o",
+    "file": "insertionsort.c",
+    "output": "build/win64/insertionsort.o"
+  },
+  {
+    "directory": "C:\\Users\\silva\\OneDrive\\Desktop\\ECG_Denoising\\codegen\\mex\\passabanda",
+    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2023b\\3P.instrset\\mingw_w64.instrset\\bin\\gcc -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c99 -I \"C:\\Users\\silva\\OneDrive\\Desktop\\ECG_Denoising\\codegen\\mex\\passabanda\" -I \"C:\\Users\\silva\\OneDrive\\Desktop\\ECG_Denoising\" -I \"C:\\Users\\silva\\OneDrive\\Desktop\\ECG_Denoising\\codegen\\mex\\passabanda\\CXSparse\\Include\" -I \"C:\\Users\\silva\\OneDrive\\Desktop\\ECG_Denoising\\codegen\\mex\\passabanda\\CXSparse\\SuiteSparse_config\" -I \"C:\\Users\\silva\\OneDrive\\Desktop\\ECG_Denoising\\codegen\\mex\\passabanda\\CXSparse\\CXSparseSupport\" -I \"C:\\Users\\silva\\OneDrive\\Desktop\\ECG_Denoising\\codegen\\mex\\passabanda\\interface\" -I \"C:\\Program Files\\MATLAB\\R2023b\\extern\\include\" -I \".\" -DMODEL=passabanda_mex -D__USE_MINGW_ANSI_STDIO=1 -msse2  passabanda_emxutil.c -o build/win64/passabanda_emxutil.o",
+    "file": "passabanda_emxutil.c",
+    "output": "build/win64/passabanda_emxutil.o"
+  },
+  {
+    "directory": "C:\\Users\\silva\\OneDrive\\Desktop\\ECG_Denoising\\codegen\\mex\\passabanda",
+    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2023b\\3P.instrset\\mingw_w64.instrset\\bin\\gcc -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c99 -I \"C:\\Users\\silva\\OneDrive\\Desktop\\ECG_Denoising\\codegen\\mex\\passabanda\" -I \"C:\\Users\\silva\\OneDrive\\Desktop\\ECG_Denoising\" -I \"C:\\Users\\silva\\OneDrive\\Desktop\\ECG_Denoising\\codegen\\mex\\passabanda\\CXSparse\\Include\" -I \"C:\\Users\\silva\\OneDrive\\Desktop\\ECG_Denoising\\codegen\\mex\\passabanda\\CXSparse\\SuiteSparse_config\" -I \"C:\\Users\\silva\\OneDrive\\Desktop\\ECG_Denoising\\codegen\\mex\\passabanda\\CXSparse\\CXSparseSupport\" -I \"C:\\Users\\silva\\OneDrive\\Desktop\\ECG_Denoising\\codegen\\mex\\passabanda\\interface\" -I \"C:\\Program Files\\MATLAB\\R2023b\\extern\\include\" -I \".\" -DMODEL=passabanda_mex -D__USE_MINGW_ANSI_STDIO=1 -msse2  filter.c -o build/win64/filter.o",
+    "file": "filter.c",
+    "output": "build/win64/filter.o"
+  },
+  {
+    "directory": "C:\\Users\\silva\\OneDrive\\Desktop\\ECG_Denoising\\codegen\\mex\\passabanda",
+    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2023b\\3P.instrset\\mingw_w64.instrset\\bin\\gcc -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c99 -I \"C:\\Users\\silva\\OneDrive\\Desktop\\ECG_Denoising\\codegen\\mex\\passabanda\" -I \"C:\\Users\\silva\\OneDrive\\Desktop\\ECG_Denoising\" -I \"C:\\Users\\silva\\OneDrive\\Desktop\\ECG_Denoising\\codegen\\mex\\passabanda\\CXSparse\\Include\" -I \"C:\\Users\\silva\\OneDrive\\Desktop\\ECG_Denoising\\codegen\\mex\\passabanda\\CXSparse\\SuiteSparse_config\" -I \"C:\\Users\\silva\\OneDrive\\Desktop\\ECG_Denoising\\codegen\\mex\\passabanda\\CXSparse\\CXSparseSupport\" -I \"C:\\Users\\silva\\OneDrive\\Desktop\\ECG_Denoising\\codegen\\mex\\passabanda\\interface\" -I \"C:\\Program Files\\MATLAB\\R2023b\\extern\\include\" -I \".\" -DMODEL=passabanda_mex -D__USE_MINGW_ANSI_STDIO=1 -msse2  interface/_coder_passabanda_info.c -o build/win64/_coder_passabanda_info.o",
+    "file": "interface/_coder_passabanda_info.c",
+    "output": "build/win64/_coder_passabanda_info.o"
+  },
+  {
+    "directory": "C:\\Users\\silva\\OneDrive\\Desktop\\ECG_Denoising\\codegen\\mex\\passabanda",
+    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2023b\\3P.instrset\\mingw_w64.instrset\\bin\\gcc -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c99 -I \"C:\\Users\\silva\\OneDrive\\Desktop\\ECG_Denoising\\codegen\\mex\\passabanda\" -I \"C:\\Users\\silva\\OneDrive\\Desktop\\ECG_Denoising\" -I \"C:\\Users\\silva\\OneDrive\\Desktop\\ECG_Denoising\\codegen\\mex\\passabanda\\CXSparse\\Include\" -I \"C:\\Users\\silva\\OneDrive\\Desktop\\ECG_Denoising\\codegen\\mex\\passabanda\\CXSparse\\SuiteSparse_config\" -I \"C:\\Users\\silva\\OneDrive\\Desktop\\ECG_Denoising\\codegen\\mex\\passabanda\\CXSparse\\CXSparseSupport\" -I \"C:\\Users\\silva\\OneDrive\\Desktop\\ECG_Denoising\\codegen\\mex\\passabanda\\interface\" -I \"C:\\Program Files\\MATLAB\\R2023b\\extern\\include\" -I \".\" -DMODEL=passabanda_mex -D__USE_MINGW_ANSI_STDIO=1 -msse2  \"C:/Program Files/MATLAB/R2023b/extern/version/c_mexapi_version.c\" -o build/win64/c_mexapi_version.o",
+    "file": "C:/Program Files/MATLAB/R2023b/extern/version/c_mexapi_version.c",
+    "output": "build/win64/c_mexapi_version.o"
+  }
+]

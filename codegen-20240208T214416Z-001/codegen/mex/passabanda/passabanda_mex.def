@@ -1,0 +1,15 @@
+LIBRARY passabanda_mex.mexw64
+EXPORTS
+mexFunction
+mexfilerequiredapiversion
+emlrtMexFcnProperties
+passabanda
+passabanda_initialize
+passabanda_terminate
+passabanda_atexit
+emxEnsureCapacity_real_T
+emxEnsureCapacity_int32_T
+emxFree_real_T
+emxFree_int32_T
+emxInit_real_T
+emxInit_int32_T
