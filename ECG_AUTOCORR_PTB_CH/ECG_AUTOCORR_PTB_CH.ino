@@ -1285,7 +1285,7 @@ libAutocorrelation aCorr(data, features, ndata, lag, sizeOfData, print);
 // -------------------------------
 // program setup
 void setup()
-{
+{ 
     Serial.begin(115200);
 
     while (!Serial);
