@@ -20,7 +20,7 @@ input(input), output(output), sizeOfData(sizeOfData), print(print) {}
 
 /* The print parameter is only for debbuging purposes*/
 
-libPassband::auxiliaryParameters()
+void libPassband::auxiliaryParameters()
 {
     x0 = x1 = x2 = x3 = 0;
     y0 = y1 = y2 = y3 = 0;

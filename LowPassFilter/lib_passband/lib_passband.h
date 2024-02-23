@@ -5,13 +5,14 @@ calculus through a N sized vector of data */
 #define PASSBAND_FILTER_H
 
 #include <cmath>
+#include "Arduino.h"
 
 class libPassband
 {
 public:
-    libPassband(double* input, double* output, int sizeOfData);
+    libPassband(double* input, double* output, int sizeOfData, int print);
 
-    auxiliaryParameters();
+    void auxiliaryParameters();
     void passbandFilter();
 
 private:
@@ -20,6 +21,7 @@ private:
     double x0, x1, x2, x3;
     double y0, y1, y2, y3;
     int sizeOfData;
+    int print;
 };
 
 #endif

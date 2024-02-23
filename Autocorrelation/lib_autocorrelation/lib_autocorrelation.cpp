@@ -1,7 +1,7 @@
 #include "lib_autocorrelation.h"
 
-libAutocorrelation::libAutocorrelation(double* data, double* features, double* ndata, int lag, int sizeOfData, int print) :
-data(data), features(features), ndata(ndata), lag(lag), sizeOfData(sizeOfData), print(print) {}
+libAutocorrelation::libAutocorrelation(double* data, double* features, double* ndata, int lag, int sizeOfData, int print)
+    : data(data), features(features), ndata(ndata), lag(lag), sizeOfData(sizeOfData), print(print) {}
 
 void libAutocorrelation::calcMean()
 {
@@ -61,11 +61,8 @@ void libAutocorrelation::atc()
         }
 
         features[l] = c;
-    }
 
-    if (print == 1)
-    {
-        for (int l = 0; l < lag; l++)
+        if (print == 1)
         {
             Serial.print("features[");
             Serial.print(l);

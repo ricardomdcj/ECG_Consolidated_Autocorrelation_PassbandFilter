@@ -1,8 +1,8 @@
 /* Includes ---------------------------------------------------------------- */
 #include <lib_autocorrelation.h>
-#include <passabanda.h>
+#include <lib_passband.h>
 
-/* #define sizeOfData 5000
+#define sizeOfData 5000
 int     lag = sizeOfData;
 double  data[sizeOfData]      = {-0.05 , -0.05 , -0.05 , -0.05 , -0.05 , -0.05 , -0.05 , -0.05 ,
     -0.05 , -0.049, -0.045, -0.045, -0.046, -0.043, -0.04 , -0.04 ,
@@ -632,23 +632,22 @@ double  data[sizeOfData]      = {-0.05 , -0.05 , -0.05 , -0.05 , -0.05 , -0.05 ,
 double  features[sizeOfData]  = {};
 double  ndata[sizeOfData]     = {0.0};
 double  outFilter[sizeOfData] = {0.0};
-int     sizeOfDataa = 5000; */
+int     sizeOfDataa = 5000;
 
-#define sizeOfData 10
+/* #define sizeOfData 100
 int lag = sizeOfData;
-double data[sizeOfData] = {0.0975, 0.2785, 0.5469, 0.9575, 0.9649, 0.1576, 0.9706, 0.9572, 0.4854, 0.8003};
+double data[sizeOfData] = {0.00000000, 0.68454711, 0.99802673, 0.77051324, 0.12533323, -0.58778525, -0.98228725, -0.84432793, -0.24868989, 0.48175367, 0.95105652, 0.90482705, 0.36812455, -0.36812455, -0.90482705, -0.95105652, -0.48175367, 0.24868989, 0.84432793, 0.98228725, 0.58778525, -0.12533323, -0.77051324, -0.99802673, -0.68454711, -0.00000000, 0.68454711, 0.99802673, 0.77051324, 0.12533323, -0.58778525, -0.98228725, -0.84432793, -0.24868989, 0.48175367, 0.95105652, 0.90482705, 0.36812455, -0.36812455, -0.90482705, -0.95105652, -0.48175367, 0.24868989, 0.84432793, 0.98228725, 0.58778525, -0.12533323, -0.77051324, -0.99802673, -0.68454711, -0.00000000, 0.68454711, 0.99802673, 0.77051324, 0.12533323, -0.58778525, -0.98228725, -0.84432793, -0.24868989, 0.48175367, 0.95105652, 0.90482705, 0.36812455, -0.36812455, -0.90482705, -0.95105652, -0.48175367, 0.24868989, 0.84432793, 0.98228725, 0.58778525, -0.12533323, -0.77051324, -0.99802673, -0.68454711, -0.00000000, 0.68454711, 0.99802673, 0.77051324, 0.12533323, -0.58778525, -0.98228725, -0.84432793, -0.24868989, 0.48175367, 0.95105652, 0.90482705, 0.36812455, -0.36812455, -0.90482705, -0.95105652, -0.48175367, 0.24868989, 0.84432793, 0.98228725, 0.58778525, -0.12533323, -0.77051324, -0.99802673, -0.68454711};
 double features[sizeOfData] = {0.0};
 double ndata[sizeOfData] = {0.0};
 double outFilter[sizeOfData] = {0.0};
-int    sizeOfDataa = 10;
+int    sizeOfDataa = 100; */
 
-int     print = 1;
+int     print = 0;
 float   mean, var;
 int     millisStart, millisEndFilter, millisEndAutocorrelation;
 
-libPassabanda  filtro(data, outFilter, &sizeOfDataa);
+libPassband  filtro(data, outFilter, sizeOfData, print);
 libAutocorrelation  aCorr(outFilter, features, ndata, lag, sizeOfData, print);
-libAutocorrelation  aCorrA(data, features, ndata, lag, sizeOfData, print);
 
 void setup() 
 {
@@ -658,15 +657,10 @@ void setup()
   Serial.println("STARTING...");
   millisStart = millis();
 
-  aCorrA.calcMean();
-  aCorrA.calcVar();
-  aCorrA.norm();
-  aCorrA.atc();
-
-  delay(1000);
   // Pass the data through the filter
   Serial.println("STARTING PASSBAND FILTERING");
-  filtro.passabanda();
+  filtro.auxiliaryParameters();
+  filtro.passbandFilter();
 
   // print the total execution time of the filter
   millisEndFilter = millis();
