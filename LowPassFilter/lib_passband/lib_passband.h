@@ -1,4 +1,4 @@
-/* This is a library created to execute a 4th order passband filtering
+/* This is a library created to execute a 3rd order passband filtering
 calculus through a N sized vector of data */
 
 #ifndef PASSBAND_FILTER_H

@@ -1,6 +1,5 @@
 /* Includes ---------------------------------------------------------------- */
-#include <lib_autocorrelation.h>
-#include <lib_filtfilt.h>
+#include <Arduino.h>
 
 /* #define sizeOfData 5000
 int     lag = sizeOfData;
@@ -634,6 +633,7 @@ double  ndata[sizeOfData]     = {0.0};
 double  outFilter[sizeOfData] = {0.0};
 int     sizeOfDataa = 5000; */
 
+#define ORDER 3
 #define sizeOfData 100
 int lag = sizeOfData;
 double data[sizeOfData] = {0.00000000, 0.68454711, 0.99802673, 0.77051324, 0.12533323, -0.58778525, -0.98228725, -0.84432793, -0.24868989, 0.48175367, 0.95105652, 0.90482705, 0.36812455, -0.36812455, -0.90482705, -0.95105652, -0.48175367, 0.24868989, 0.84432793, 0.98228725, 0.58778525, -0.12533323, -0.77051324, -0.99802673, -0.68454711, -0.00000000, 0.68454711, 0.99802673, 0.77051324, 0.12533323, -0.58778525, -0.98228725, -0.84432793, -0.24868989, 0.48175367, 0.95105652, 0.90482705, 0.36812455, -0.36812455, -0.90482705, -0.95105652, -0.48175367, 0.24868989, 0.84432793, 0.98228725, 0.58778525, -0.12533323, -0.77051324, -0.99802673, -0.68454711, -0.00000000, 0.68454711, 0.99802673, 0.77051324, 0.12533323, -0.58778525, -0.98228725, -0.84432793, -0.24868989, 0.48175367, 0.95105652, 0.90482705, 0.36812455, -0.36812455, -0.90482705, -0.95105652, -0.48175367, 0.24868989, 0.84432793, 0.98228725, 0.58778525, -0.12533323, -0.77051324, -0.99802673, -0.68454711, -0.00000000, 0.68454711, 0.99802673, 0.77051324, 0.12533323, -0.58778525, -0.98228725, -0.84432793, -0.24868989, 0.48175367, 0.95105652, 0.90482705, 0.36812455, -0.36812455, -0.90482705, -0.95105652, -0.48175367, 0.24868989, 0.84432793, 0.98228725, 0.58778525, -0.12533323, -0.77051324, -0.99802673, -0.68454711};
@@ -642,12 +642,13 @@ double ndata[sizeOfData] = {0.0};
 double outFilter[sizeOfData] = {0.0};
 int    sizeOfDataa = 100;
 
-int     print = 1;
+int     print = 0;
 float   mean, var;
-int     millisStart, millisEndFilter, millisEndAutocorrelation;
+int     millisStart, millisEndFilter;
+double az[] = {1.0, -1.463561442496923, 0.914051209844413, -0.198874182451286};
+double bz[] = {0.031451948112026, 0.094355844336077, 0.094355844336077, 0.031451948112026};
 
-libFiltfilt filter(data, outFilter, sizeOfData, print);
-libAutocorrelation  aCorr(outFilter, features, ndata, lag, sizeOfData, print);
+void filtfilt(const double *b, const double *a, int order, const double *x, int size, double *y);
 
 void setup() 
 {
@@ -659,7 +660,7 @@ void setup()
 
   // Pass the data through the filter
   Serial.println("STARTING PASSBAND FILTERING");
-  filter.filtfilt();
+  filtfilt(bz, az, ORDER, data, sizeOfData, outFilter);
 
   // print the total execution time of the filter
   millisEndFilter = millis();
@@ -667,23 +668,60 @@ void setup()
   Serial.print(millisEndFilter - millisStart);
   Serial.println("ms");
 
-  // Calculate autocorrelation of the data
-  Serial.println("STARTING AUTOCORRELATION");
-  aCorr.calcMean();
-  aCorr.calcVar();
-  aCorr.norm();
-  aCorr.atc();
+  Serial.println("Setup Done!");
 
-  // print the total execution time of the autocorrelation
-  millisEndAutocorrelation = millis();
-  Serial.print("Autocorrelation execution time:");
-  Serial.print(millisEndAutocorrelation - millisEndFilter);
-  Serial.println("ms");
+  Serial.println("Sinal de entrada:");
+    for (int i = 0; i < sizeOfData; ++i) {
+        Serial.print(data[i], 4);
+        Serial.print(" ");
+    }
 
-  Serial.print("Setup Done!");
+    Serial.println("\nSinal de saída:");
+    for (int i = 0; i < sizeOfData; ++i) {
+        Serial.print(outFilter[i], 4);
+        Serial.print(" ");
+    }
 }
 
 void loop() {
   // put your main code here, to run repeatedly:
 
+}
+
+void filtfilt(const double *b, const double *a, int order, const double *x, int size, double *y) {
+    double tmp1[size] = {0.0};
+    double tmp2[size] = {0.0};
+
+    // Forward filter
+    for (int i = 0; i < size; ++i) {
+        for (int j = 0; j <= order; ++j) {
+            if (i - j >= 0) {
+                tmp1[i] += b[j] * x[i - j];
+            }
+        }
+        for (int j = 1; j <= order; ++j) {
+            if (i - j >= 0) {
+                tmp1[i] -= a[j] * tmp1[i - j];
+            }
+        }
+    }
+
+    // Backward filter
+    for (int i = size - 1; i >= 0; --i) {
+        for (int j = 0; j <= order; ++j) {
+            if (i + j < size) {
+                tmp2[i] += b[j] * tmp1[i + j];
+            }
+        }
+        for (int j = 1; j <= order; ++j) {
+            if (i + j < size) {
+                tmp2[i] -= a[j] * tmp2[i + j];
+            }
+        }
+    }
+
+    // Scaling
+    for (int i = 0; i < size; ++i) {
+        y[i] = tmp2[i] / a[0];
+    }
 }

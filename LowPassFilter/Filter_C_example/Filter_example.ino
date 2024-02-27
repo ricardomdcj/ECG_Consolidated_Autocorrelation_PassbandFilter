@@ -1,6 +1,6 @@
 /* Includes ---------------------------------------------------------------- */
 #include <lib_autocorrelation.h>
-#include <lib_filtfilt.h>
+#include <lib_passband.h>
 
 /* #define sizeOfData 5000
 int     lag = sizeOfData;
@@ -642,11 +642,11 @@ double ndata[sizeOfData] = {0.0};
 double outFilter[sizeOfData] = {0.0};
 int    sizeOfDataa = 100;
 
-int     print = 1;
+int     print = 0;
 float   mean, var;
 int     millisStart, millisEndFilter, millisEndAutocorrelation;
 
-libFiltfilt filter(data, outFilter, sizeOfData, print);
+libPassband  filtro(data, outFilter, sizeOfData, print);
 libAutocorrelation  aCorr(outFilter, features, ndata, lag, sizeOfData, print);
 
 void setup() 
@@ -659,7 +659,8 @@ void setup()
 
   // Pass the data through the filter
   Serial.println("STARTING PASSBAND FILTERING");
-  filter.filtfilt();
+  filtro.auxiliaryParameters();
+  filtro.passbandFilter();
 
   // print the total execution time of the filter
   millisEndFilter = millis();
