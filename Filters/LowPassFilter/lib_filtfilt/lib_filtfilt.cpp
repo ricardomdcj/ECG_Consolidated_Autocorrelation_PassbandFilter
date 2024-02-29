@@ -11,8 +11,8 @@
 double az[] = {1.0, -1.463561442496923, 0.914051209844413, -0.198874182451286};
 double bz[] = {0.031451948112026, 0.094355844336077, 0.094355844336077, 0.031451948112026};
 
-libFiltfilt::libFiltfilt(double *x,
-                         double *y,
+libFiltfilt::libFiltfilt(double* x,
+                         double* y,
                          int sizeOfData,
                          int print) :
                          x(x), y(y), sizeOfData(sizeOfData), print(print) {}
@@ -27,8 +27,8 @@ libFiltfilt::~libFiltfilt()
 
 void libFiltfilt::filtfilt()
 {
-    const double *b = bz;
-    const double *a = az;
+    const double* b = bz;
+    const double* a = az;
     double tmp1[sizeOfData] = {0.0};
     double tmp2[sizeOfData] = {0.0};
 
@@ -79,7 +79,7 @@ void libFiltfilt::filtfilt()
     if (print == 1)
     {
         Serial.println("");
-        Serial.println("Sinal de saída do filtro:");
+        Serial.println("Filtfilt output signal:");
         for (int i = 0; i < sizeOfData; i++)
         {
             Serial.print("filterOutput[");

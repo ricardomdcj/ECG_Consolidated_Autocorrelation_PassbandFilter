@@ -10,8 +10,8 @@ calculus through a N sized vector of data */
 class libFiltfilt
 {
 public:
-    libFiltfilt(double *x,
-                double *y,
+    libFiltfilt(double* x,
+                double* y,
                 int sizeOfData,
                 int print);
 
@@ -20,12 +20,12 @@ public:
     void filtfilt();
 
 private:
-    double *tmp1;
-    double *tmp2;
-    double *b;
-    double *a;
-    double *x;
-    double *y;
+    double* tmp1;
+    double* tmp2;
+    double* b;
+    double* a;
+    double* x;
+    double* y;
     int filtOrder;
     int sizeOfData;
     int print;
