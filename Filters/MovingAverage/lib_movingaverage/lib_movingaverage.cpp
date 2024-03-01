@@ -34,7 +34,7 @@ void libMovingaverage::movingAverageFilter()
         Serial.println("Sinal de saída do filtro:");
         for (int i = 0; i < sizeOfData; i++)
         {
-            Serial.print("filterOutput[");
+            Serial.print("MovAvgOutput[");
             Serial.print(i);
             Serial.print("] = ");
             Serial.println(outputData[i], 8);

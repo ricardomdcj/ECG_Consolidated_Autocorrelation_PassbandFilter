@@ -17,7 +17,7 @@ int    sizeOfWindoww = 25;
 int    print = 1;
 int    millisStart, millisEndFilter;
 
-libMovingaverage movingAverage(inputData, outputData, sizeOfWindoww, sizeOfDataa, print);
+libMovingaverage movingAverage(inputData, outputData, sizeOfWindow, sizeOfData, print);
 
 void setup() 
 {

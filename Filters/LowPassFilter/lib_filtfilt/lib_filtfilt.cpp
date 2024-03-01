@@ -19,18 +19,18 @@ libFiltfilt::libFiltfilt(double* x,
 
 libFiltfilt::~libFiltfilt()
 {
-    delete[] tmp1;
+/*     delete[] tmp1;
     delete[] tmp2;
     delete[] b;
-    delete[] a;
+    delete[] a; */
 }
 
 void libFiltfilt::filtfilt()
 {
     const double* b = bz;
     const double* a = az;
-    double tmp1[sizeOfData] = {0.0};
-    double tmp2[sizeOfData] = {0.0};
+    double* tmp1 = new double[sizeOfData]();
+    double* tmp2 = new double[sizeOfData]();
 
     // Forward filter
     for (int i = 0; i < sizeOfData; ++i)
@@ -76,13 +76,16 @@ void libFiltfilt::filtfilt()
         y[i] = tmp2[i] / a[0];
     }
 
+    delete[] tmp1;
+    delete[] tmp2;
+
     if (print == 1)
     {
         Serial.println("");
         Serial.println("Filtfilt output signal:");
         for (int i = 0; i < sizeOfData; i++)
         {
-            Serial.print("filterOutput[");
+            Serial.print("FiltfiltOutput[");
             Serial.print(i);
             Serial.print("] = ");
             Serial.println(y[i], 8);
