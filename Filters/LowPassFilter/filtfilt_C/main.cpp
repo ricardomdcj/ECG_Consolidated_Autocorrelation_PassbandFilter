@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <math.h>
 
-#define sizeOfData 5000     // Tamanho do sinal de entrada
+#define sizeOfData 100     // Tamanho do sinal de entrada
 
 void filtfilt(const double *b, const double *a, int order, const double *x, int N, double *y) {
     int i, j;
@@ -59,8 +59,9 @@ int main() {
     {
         x[i] = sin(0.7540*i);  // Sinal de entrada
     } */
+    double x[sizeOfData] =  {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100};
 
-    double x[sizeOfData] = {
+   /*  double x[sizeOfData] = {
         5.86138502e+01,  5.17289944e+01,  4.15551273e+01,  3.03241423e+01,
         1.88617285e+01,  7.78954404e+00, -2.10058592e+00, -1.12479936e+01,
        -2.06696991e+01, -2.94924730e+01, -3.60167857e+01, -3.83831016e+01,
@@ -1311,7 +1312,7 @@ int main() {
        -3.34519825e+01, -3.83831016e+01, -3.60167857e+01, -2.94924730e+01,
        -2.06696991e+01, -1.12479936e+01, -2.10058592e+00,  7.78954404e+00,
         1.88617285e+01,  3.03241423e+01,  4.15551273e+01,  5.17289944e+01};
-
+ */
     double y[sizeOfData];    // Sinal de saída
 
     filtfilt(bz, az, order, x, sizeOfData, y);

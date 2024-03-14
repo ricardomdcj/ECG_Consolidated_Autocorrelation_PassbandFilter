@@ -1,8 +1,10 @@
-#include <lib_autocorrelation.h>
+/* Includes ---------------------------------------------------------------- */
+#include <lib_convolve.h>
 
-#define  lag         100
-#define  sizeOfData  100
-double data[sizeOfData]   =   { 0.00806596, 0.00804456, 0.00802316, 0.00800178, 0.0079804 ,
+#define sizeOfWindow 25
+#define sizeOfData 100
+
+double inputData[sizeOfData] = {0.00806596, 0.00804456, 0.00802316, 0.00800178, 0.0079804 ,
                                 0.00795904, 0.00793769, 0.00791636, 0.00789503, 0.00787372,
                                 0.00785242, 0.00783113, 0.00780986, 0.00778859, 0.00776734,
                                 0.00774611, 0.00772488, 0.00770367, 0.00768246, 0.00766128,
@@ -22,27 +24,32 @@ double data[sizeOfData]   =   { 0.00806596, 0.00804456, 0.00802316, 0.00800178, 
                                 0.00629204, 0.00627176, 0.00625149, 0.00623124, 0.00621101,
                                 0.00619079, 0.00617058, 0.00615039, 0.00613021, 0.00611005,
                                 0.00608991, 0.00606978, 0.00604966, 0.00602956, 0.00600948};
+double outputData[sizeOfData] = {0.0};
 
-double  features[sizeOfData]  = {0.0};
-double  ndata[sizeOfData]   = {0.0};
+int    print = 1;
+int    millisStart, millisEndFilter;
 
-// if you want to print the mean, var and autocorrelation array, then set print = 1
-int     print = 1;
+libConvolve movingAverage(inputData, outputData, sizeOfData, sizeOfWindow, print);
 
-libAutocorrelation aCorr(data, features, ndata, lag, sizeOfData, print);
-
-void setup() {
+void setup() 
+{
   Serial.begin(115200);
 
   while (!Serial);
+  Serial.println("STARTING...");
+  millisStart = millis();
 
-  aCorr.calcMean();
-  aCorr.calcVar();
-  aCorr.norm();
-  aCorr.atc();
+  // Pass the data through the filter
+  Serial.println("STARTING MOVING AVERAGE FILTERING");
+  movingAverage.convolve();
+
+  // print the total execution time of the filter
+  millisEndFilter = millis();
+  Serial.print("Filter execution time:");
+  Serial.print(millisEndFilter - millisStart);
+  Serial.println("ms");
 
   Serial.print("Setup Done!");
 }
 
-void loop() {
-}
+void loop() {}
